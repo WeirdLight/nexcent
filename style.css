@@ -1,7 +1,12 @@
 :root{
     --color-main: white;
     --fc-main: #4D4D4D;
+    --fc-grey: #717171;
     --fs-nav: 16px;
+    --fs-h1: 45px;
+    --fs-p: 12px;
+    --fs-h2: 25px;
+    --main-gradient: linear-gradient(to left, #F5F7FA 80%, white);
     --ff-inter: Inter;
     --color-brand-primary: #4CAF4F;
     --color-brand-primary2: #388E3B;
@@ -16,14 +21,18 @@
 header{
     width: 100%;
     box-shadow: 0px 4px 8px 0px rgba(171, 190, 209, 0.4);
+    z-index: 1;
+    position: sticky;
 }
-header > div{
+header > div.container{
+    height: 54px;
+}
+div.container{
     width: 80%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 54px;
 }
 header ul{
     display: flex;
@@ -39,7 +48,10 @@ nav a{
 }
 nav a:hover{
     text-decoration-color: var(--fc-main);
+}
+nav a:focus{
     border-color: var(--fc-main);
+    text-decoration-color: var(--fc-main);
 }
 nav a:active{
     border-color: var(--color-main);
@@ -65,7 +77,7 @@ nav{
     margin-left: 4px;
 }
 
-header button{
+button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,16 +87,108 @@ header button{
     color: var(--color-main);
     background: var(--color-brand-primary);
     border: none;
+    cursor: pointer;
 }
-header button:focus{
+button:focus{
     border: 2px var(--fc-main) solid;
 }
-header button:active{
+button:active{
     background-color: var(--color-brand-primary2);
     border-color: none;
 }
-nav, header button{
+nav, button{
     font-family: var(--ff-inter);
     font-size: var(--fs-nav);
     font-weight: 500;
+}
+
+
+main{
+    background-image: var(--main-gradient);
+    padding-bottom: 12px;
+}
+main div.container{
+    height: 416px;
+    padding: 67px 0;
+}
+h1{
+    font-family: var(--ff-inter);
+    font-size: var(--fs-h1);
+    line-height: calc(var(--fs-h1)*1.18);
+    font-weight: 600;
+    color: var(--fc-main);
+}
+h1 > span{
+    color: var(--color-brand-primary);
+}
+p{
+    font-family: var(--ff-inter);
+    font-size: var(--fs-p);
+    color: var(--fc-grey);
+    font-weight: 400;
+    margin: 12px 0 22px 0;
+}
+main button{
+    height: 33px;
+    width: 126px;
+}
+.main-img{
+    background: url(./src/main-img.svg);
+    height: 283px;
+    width: 272px;
+}
+.dot{
+    width: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.circle{
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50px;
+    background-color: var(--color-brand-primary);
+    opacity: 0.3;
+    cursor: pointer;
+}
+.circle.active{
+    opacity: 1;
+}
+
+
+.our-client{
+    padding: 28px 0 0 0;
+}
+
+.our-client .text{
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2{
+    font-size: var(--fs-h2);
+    font-weight: 600;
+    font-family: var(--ff-inter);
+    color: var(--fc-main);
+}
+
+.our-client p{
+    margin: 6px 0 12px 0;
+}
+
+div.clients{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 68px;
+    align-items: center;
+}
+
+div.clients span{
+    width: 31px;
+    height: 31px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
