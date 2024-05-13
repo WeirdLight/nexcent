@@ -203,15 +203,15 @@ section.community{
 
 div.suitable{
     width: 220px;
-    height: 182px;
+    height: 205px;
     padding: 17px 22px 17px 22px;
     box-shadow: 0px 1.39px 2.78px 0px rgba(171, 190, 209, 0.2);
     text-align: center;
     transition: 0.3s;
 }
 div.suitable:nth-of-type(2){
-    padding: 17px 25px 17px 25px;  
-    height: 192px;
+    padding: 17px 24px 17px 25px;  
+    height: 215px;
 }
 div.suitable:hover{
     transform: scale(1.1, 1.1);
@@ -230,10 +230,6 @@ h3{
     line-height: calc(var(--fs-h3)*1.25);
     font-weight: 700;
     color: var(--fc-main);
-}
-
-div.suitable p, .unlock p{
-    font-size: 10px;
 }
 
 section.unlock{
@@ -285,4 +281,20 @@ section.achive{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+section.how-to{
+    height: 302px;
+    margin-top: 33px;
+    justify-content: space-between;
+}
+.how-to-image{
+    background-image: url(./src/how-to.svg);
+    width: 307px;
+    height: 302px;
+    display: flex;
+}
+
+.how-to .descr{
+    width: 418px;
 }
