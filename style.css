@@ -121,7 +121,7 @@ h1{
     font-weight: 600;
     color: var(--fc-main);
 }
-h1 > span{
+h1 > span, h2>span{
     color: var(--color-brand-primary);
 }
 p{
@@ -176,7 +176,7 @@ h2{
     color: var(--fc-main);
 }
 
-.our-client p{
+.our-client p, .achive p{
     margin: 6px 0 12px 0;
 }
 
@@ -232,13 +232,15 @@ h3{
     color: var(--fc-main);
 }
 
-div.suitable p{
+div.suitable p, .unlock p{
     font-size: 10px;
 }
 
-
 section.unlock{
     margin-top: 33px;
+    height: 301px;
+    display: flex;
+    align-items: center;
 }
 
 span.unlock-img{
@@ -247,6 +249,40 @@ span.unlock-img{
     height: 229px;
 }
 
-span.descr{
+.unlock span.descr{
     width: 418px;
+}
+
+.achive span.descr{
+    width: 300px;
+}
+
+section.achive{
+    margin-top: 33px;
+    height: 203px;
+    display: flex;
+    align-items: center;
+    background-image: var(--main-gradient);
+}
+
+.achives{
+    display: flex;
+    flex-wrap: wrap;
+    width: 376px;
+    height: 120px;
+    justify-content: space-between;
+}
+.achives > span{
+    width: 178px;
+}
+
+.achives > span > span{
+    width: 33px;
+    height: 33px;
+    display: flex;
+    float: left;
+    margin-right: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
