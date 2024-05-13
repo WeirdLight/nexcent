@@ -6,6 +6,7 @@
     --fs-h1: 45px;
     --fs-p: 12px;
     --fs-h2: 25px;
+    --fs-h3: 20px;
     --main-gradient: linear-gradient(to left, #F5F7FA 80%, white);
     --ff-inter: Inter;
     --color-brand-primary: #4CAF4F;
@@ -22,7 +23,9 @@ header{
     width: 100%;
     box-shadow: 0px 4px 8px 0px rgba(171, 190, 209, 0.4);
     z-index: 1;
+    background-color: var(--color-main);
     position: sticky;
+    top: 0;
 }
 header > div.container{
     height: 54px;
@@ -161,7 +164,7 @@ main button{
     padding: 28px 0 0 0;
 }
 
-.our-client .text{
+section .text{
     margin: 0 auto;
     text-align: center;
 }
@@ -191,4 +194,43 @@ div.clients span{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+
+section.community{
+    margin-top: 28px;
+}
+
+div.suitable{
+    width: 220px;
+    height: 182px;
+    padding: 17px 22px 17px 22px;
+    box-shadow: 0px 1.39px 2.78px 0px rgba(171, 190, 209, 0.2);
+    text-align: center;
+    transition: 0.3s;
+}
+div.suitable:nth-of-type(2){
+    padding: 17px 25px 17px 25px;  
+}
+div.suitable:hover{
+    transform: scale(1.1, 1.1);
+}
+div.suitable span{
+    width: 45px;
+    height: 39px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 12px;
+}
+
+h3{
+    font-family: var(--ff-inter);
+    font-size: var(--fs-h3);
+    line-height: calc(var(--fs-h3)*1.25);
+    font-weight: 700;
+    color: var(--fc-main);
+}
+
+div.suitable p{
+    font-size: 10px;
 }
