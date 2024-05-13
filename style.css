@@ -211,6 +211,7 @@ div.suitable{
 }
 div.suitable:nth-of-type(2){
     padding: 17px 25px 17px 25px;  
+    height: 192px;
 }
 div.suitable:hover{
     transform: scale(1.1, 1.1);
@@ -233,4 +234,19 @@ h3{
 
 div.suitable p{
     font-size: 10px;
+}
+
+
+section.unlock{
+    margin-top: 33px;
+}
+
+span.unlock-img{
+    background-image: url(./src/unlock.svg);
+    width: 307px;
+    height: 229px;
+}
+
+span.descr{
+    width: 418px;
 }
