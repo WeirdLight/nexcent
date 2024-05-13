@@ -1,0 +1,90 @@
+:root{
+    --color-main: white;
+    --fc-main: #4D4D4D;
+    --fs-nav: 16px;
+    --ff-inter: Inter;
+    --color-brand-primary: #4CAF4F;
+    --color-brand-primary2: #388E3B;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    box-shadow: 0px 4px 8px 0px rgba(171, 190, 209, 0.4);
+}
+header > div{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 54px;
+}
+header ul{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    color: var(--fc-main);
+    text-decoration-color: var(--color-main);
+    text-underline-offset: 4px;
+    border: 1px solid var(--color-main);
+}
+nav a:hover{
+    text-decoration-color: var(--fc-main);
+    border-color: var(--fc-main);
+}
+nav a:active{
+    border-color: var(--color-main);
+    color: var(--color-brand-primary2);
+    text-decoration-color: var(--color-brand-primary2);
+}
+header li{
+    list-style: none;
+}
+nav{
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+}
+.arrow{
+    background-image: url(./src/arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 8px;
+    height: 4px;
+    display: flex;
+    margin-left: 4px;
+}
+
+header button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 30px;
+    border-radius: 2.78px;
+    color: var(--color-main);
+    background: var(--color-brand-primary);
+    border: none;
+}
+header button:focus{
+    border: 2px var(--fc-main) solid;
+}
+header button:active{
+    background-color: var(--color-brand-primary2);
+    border-color: none;
+}
+nav, header button{
+    font-family: var(--ff-inter);
+    font-size: var(--fs-nav);
+    font-weight: 500;
+}
