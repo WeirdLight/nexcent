@@ -4,9 +4,13 @@
     --fc-grey: #717171;
     --fs-nav: 16px;
     --fs-h1: 45px;
-    --fs-p: 12px;
+    --fs-p: 14px;
     --fs-h2: 25px;
     --fs-h3: 20px;
+    --fc-placeholder: #D9DBE1;
+    --color-input: #61696c;
+    --color-black: #263238;
+    --color-silver: #F5F7FA;
     --main-gradient: linear-gradient(to left, #F5F7FA 80%, white);
     --ff-inter: Inter;
     --color-brand-primary: #4CAF4F;
@@ -19,6 +23,10 @@
     box-sizing: border-box;
 }
 
+section{
+    padding: 30px 0;
+}
+
 header{
     width: 100%;
     box-shadow: 0px 4px 8px 0px rgba(171, 190, 209, 0.4);
@@ -29,7 +37,6 @@ header{
 }
 header > div.container{
     height: 54px;
-    width: 80%;
 }
 div.container{
     width: 950px;
@@ -41,15 +48,15 @@ div.container{
 }
 header ul{
     display: flex;
-    width: 70%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
-nav a{
+nav a, footer a{
     color: var(--fc-main);
-    text-decoration-color: var(--color-main);
+    text-decoration-color: rgba(0,0,0,0);
     text-underline-offset: 4px;
-    border: 1px solid var(--color-main);
+    border: 1px solid rgba(0,0,0,0);
 }
 nav a:hover{
     text-decoration-color: var(--fc-main);
@@ -58,26 +65,22 @@ nav a:focus{
     border-color: var(--fc-main);
     text-decoration-color: var(--fc-main);
 }
-nav a:active, .opinion a:active{
-    border-color: var(--color-main);
-    color: var(--color-brand-primary2);
-    text-decoration-color: var(--color-brand-primary2);
-}
-header li{
+li{
     list-style: none;
 }
 nav{
     display: flex;
     width: 600px;
     justify-content: space-between;
+    align-items: center;
 }
 .arrow{
     background-image: url(./src/arrow.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    width: 8px;
-    height: 4px;
+    width: 10px;
+    height: 6px;
     display: flex;
     margin-left: 4px;
 }
@@ -107,6 +110,15 @@ nav, button{
     font-weight: 500;
 }
 
+.burger{
+    background: url(./src/burger.svg) no-repeat center center;
+    background-size: contain;
+    width: 30px;
+    height: 20px;
+    display: none;
+    cursor: pointer;
+}
+
 
 main{
     background-image: var(--main-gradient);
@@ -126,7 +138,7 @@ h1{
 h1 > span, h2>span{
     color: var(--color-brand-primary);
 }
-p{
+p, input::placeholder{
     font-family: var(--ff-inter);
     font-size: var(--fs-p);
     color: var(--fc-grey);
@@ -161,15 +173,10 @@ main button{
     opacity: 1;
 }
 
-
-.our-client{
-    padding: 28px 0 0 0;
-}
-
 section .text{
     margin: 0 auto;
     text-align: center;
-    width: 438px;
+    padding: 0 10px;
     display: block;
 }
 
@@ -200,22 +207,19 @@ div.clients span, span.companies > span{
     background-size: contain;
 }
 
-
-section.community{
-    margin-top: 28px;
-}
-
 div.suitable{
     width: 220px;
-    height: 205px;
-    padding: 17px 22px 17px 22px;
+    height: 230px;
+    padding: 17px 10px;
     box-shadow: 0px 1.39px 2.78px 0px rgba(171, 190, 209, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     transition: 0.3s;
 }
-div.suitable:nth-of-type(2){
-    padding: 17px 24px 17px 25px;  
-    height: 215px;
+div.suitable p{
+    margin: 0;
 }
 div.suitable:hover{
     transform: scale(1.1, 1.1);
@@ -237,8 +241,6 @@ h3{
 }
 
 section.unlock{
-    margin-top: 33px;
-    height: 301px;
     display: flex;
     align-items: center;
 }
@@ -258,8 +260,6 @@ span.unlock-img{
 }
 
 section.achive{
-    margin-top: 33px;
-    height: 203px;
     display: flex;
     align-items: center;
     background-image: var(--main-gradient);
@@ -288,8 +288,6 @@ section.achive{
 }
 
 section.how-to{
-    height: 302px;
-    margin-top: 33px;
     justify-content: space-between;
 }
 .how-to-image{
@@ -306,7 +304,6 @@ section.how-to{
 .opinion{
     padding: 22px 0;
     background-image: var(--main-gradient);
-    margin-top: 33px;
 }
 .opinion-img{
     background-image: url(./src/opinion-title.png);
@@ -314,6 +311,7 @@ section.how-to{
     height: 226px;
     background-position: center center;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .opinion .descr{
@@ -331,6 +329,7 @@ span.companies{
     width: 100%;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -350,12 +349,8 @@ a > span{
     display: inline-block;
 }
 
-.opinion a:focus{
+.opinion a:focus, .blog a:focus{
     border-color: var(--color-brand-primary2);
-}
-
-section.blog{
-    margin-top: 33px;
 }
 
 article{
@@ -363,6 +358,9 @@ article{
     height: 256px;
     border-radius: 5.6px;
     position: relative;
+}
+.blog div.container{
+    flex-wrap: wrap;
 }
 .article-img{
     width: 100%;
@@ -379,7 +377,7 @@ article h3{
 }
 .title{
     width: 220px;
-    height: 124px;
+    height: 135px;
     padding: 12px;
     text-align: center;
     background-color: var(--color-main);
@@ -393,4 +391,226 @@ article h3{
 article a{
     margin-top: 15px;
     justify-content: center;
+}
+
+section.get-demo{
+    background-image: var(--main-gradient);
+    padding: 22px 0;
+}
+.get-demo .text{
+    min-width: 70%;
+    max-width: 618px;
+}
+
+section .text button{
+    margin: 0 auto;
+    margin-top: 22px;
+}
+
+section + footer{
+    padding: 30px 0;
+    background-color: var(--color-black);
+}
+
+footer div.container{
+    flex-wrap: wrap;
+}
+
+footer img{
+    width: 133px;
+    height: 21px;
+}
+.company-info{
+    width: 200px;
+    height: 147px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer p{
+    color: var(--color-silver);
+    line-height: calc(var(--fs-p)*1.5);
+}
+
+.social-networks{
+    width: 122px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-networks img{
+    width: 22px;
+    height: 22px;
+    display: flex;
+}
+footer h3{
+    color: var(--color-main);
+    margin-bottom: 16px;
+}
+footer li{
+    margin-bottom: 9px;
+}
+footer a{
+    color: var(--color-silver);
+    font-family: var(--ff-inter);
+    font-size: var(--fs-p);
+}
+footer a:hover{
+    text-decoration-color: var(--color-silver);
+}
+footer a:focus{
+    border-color: var(--color-silver);
+    text-decoration-color: var(--color-silver);
+}
+footer div.container > div.container{
+    width: 450px;
+    margin: 0;
+}
+.inputs{
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    position: relative;
+}
+footer input[type='email']{
+    width: 180px;
+    height: 28px;
+    border-radius: 2.57px;
+    background-color: var(--color-input);
+    border: none;
+    padding: 0 10px;
+}
+input::placeholder{
+    color: var(--fc-placeholder);
+}
+footer input[type='submit']{
+    right: 10px;
+    top: 25%;
+    position: absolute;
+    min-width: 11px;
+    min-height: 11px;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    background-image: url(./src/plane.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+nav a:active, .opinion a:active, .blog a:active, footer a:active{
+    border-color: rgba(0,0,0,0);
+    color: var(--color-brand-primary2);
+    text-decoration-color: var(--color-brand-primary2);
+}
+
+footer a:active{
+    color: var(--fc-grey);
+    text-decoration-color: var(--fc-grey);
+}
+
+@media (max-width: 970px){
+    header nav{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 55px;
+        height: 35px;
+        right: 0;
+        background-color: rgba(97, 105, 108, 0.7);
+        padding: 0 1%;
+        display: none;
+    }
+    nav.open{
+        display: flex;
+    }
+    .burger{
+        display: flex;
+    }
+    header a{
+        color: var(--color-silver);
+        font-size: 14px;
+    }
+    header button{
+        transform: scale(0.7,0.7);
+        margin: 0;
+    }
+
+    main div.container{
+        justify-content: center;
+        text-align: center;
+        height: 330px;
+    }
+    main h1{
+        font-size: 40px;
+        margin-top: 30px;
+    }
+    button{
+        margin: 0 auto;
+    }
+    .main-img{
+        display: none;
+    }
+
+    .community div.container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .suitable{
+        margin-left: 2%;
+    }
+
+    .unlock-img{
+        display: none;
+    }
+
+    section.achive{
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .achive .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .achive span.descr, .unlock span.descr{
+        margin: 0 auto;
+    }
+    .achives{
+        width: 352px;
+        min-width: 270px;
+        margin: 0 auto;
+    }
+
+    .achives > span{
+        width: 155px;
+    }
+
+    .how-to-image{
+        display: none;
+    }
+
+    .opinion .container{
+        display: block;
+    }
+
+    .blog div.container{
+       justify-content: center;
+    }
+
+    article{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 445px){
+    header nav.open, header ul{
+        display: block;
+        width: 100%;
+    }
+    header nav.open button{
+        margin: 0 auto;
+    }
+    header nav{
+        height: 100vh;
+    }
 }
