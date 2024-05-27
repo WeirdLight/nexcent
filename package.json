@@ -1,0 +1,27 @@
+{
+  "name": "nexcent",
+  "version": "1.0.0",
+  "description": "nexcent for portfolio",
+  "main": "./scripts/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/WeirdLight/nexcent.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Kateryna Diachuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WeirdLight/nexcent/issues"
+  },
+  "homepage": "https://github.com/WeirdLight/nexcent#readme",
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}
