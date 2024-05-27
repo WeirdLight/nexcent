@@ -23,6 +23,10 @@
     box-sizing: border-box;
 }
 
+main{
+    overflow-x: hidden;
+}
+
 section{
     padding: 30px 0;
 }
@@ -122,7 +126,8 @@ nav, button{
 
 main{
     background-image: var(--main-gradient);
-    padding-bottom: 12px;
+    height: 500px;
+    position: relative;
 }
 main div.container{
     height: 416px;
@@ -158,7 +163,10 @@ main button{
     width: 30px;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    right: 50%;
+    transform: translateX(50%);
+    position: absolute;
+    bottom: 12px;
 }
 .circle{
     display: inline-block;
@@ -168,6 +176,7 @@ main button{
     background-color: var(--color-brand-primary);
     opacity: 0.3;
     cursor: pointer;
+    z-index: 5;
 }
 .circle.active{
     opacity: 1;
@@ -185,6 +194,24 @@ h2{
     font-weight: 600;
     font-family: var(--ff-inter);
     color: var(--fc-main);
+}
+
+main div.container{
+    transform: translateX(200%);
+    position: absolute;
+    right: 50%;
+    animation-fill-mode: forwards;
+    transition: transform 0.8s;
+}
+
+main div.container.new-slide{
+    transform: translateX(50%);
+}
+main div.container.remove-slide{
+    transform: translateX(-100%);
+}
+main div.container.reverse-old{
+    transform: translateX(200%);
 }
 
 .our-client p, .achive p, .blog p{
@@ -216,7 +243,7 @@ div.suitable{
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    transition: 0.3s;
+    transition: transform 0.3s;
 }
 div.suitable p{
     margin: 0;
@@ -352,7 +379,10 @@ a > span{
 .opinion a:focus, .blog a:focus{
     border-color: var(--color-brand-primary2);
 }
-
+.blog .text{
+    max-width: 900px;
+    min-width: 200px;
+}
 article{
     width: 256px;
     height: 256px;
@@ -550,12 +580,12 @@ footer a:active{
         display: none;
     }
 
-    .community div.container{
+    .community div.container, 
+    .blog div.container{
         flex-wrap: wrap;
-        justify-content: center;
     }
-    .suitable{
-        margin-left: 2%;
+    .suitable, article{
+        margin: 0 auto 20px auto;
     }
 
     .unlock-img{
@@ -591,14 +621,6 @@ footer a:active{
 
     .opinion .container{
         display: block;
-    }
-
-    .blog div.container{
-       justify-content: center;
-    }
-
-    article{
-        margin-bottom: 20px;
     }
 }
 

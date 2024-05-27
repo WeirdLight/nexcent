@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script defer type="module" src="./scripts/index.js"></script>
 </head>
 
 <body>
@@ -29,19 +30,37 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            <div class='text'>
-                <h1>Lessons and insights</br><span>from 8 years</span></h1>
-                <p>Where to grow your business as a photographer: site or social media?</p>
-                <button>Register</button>
+        <div class="sliders">
+            <div class="container s1">
+                <div class='text'>
+                    <h1>Lessons and insights</br><span>from 8 years</span></h1>
+                    <p>Where to grow your business as a photographer: site or social media?</p>
+                    <button>Register</button>
+                </div>
+                <span class="main-img"></span>
             </div>
-            <span class="main-img"></span>
+            <div class="container s2">
+                <div class='text'>
+                    <h1>Lessons and insights</br><span>from 7 years</span></h1>
+                    <p>Where to grow your business as a photographer: site or social media?</p>
+                    <button>Register</button>
+                </div>
+                <span class="main-img"></span>
+            </div>
+            <div class="container s3">
+                <div class='text'>
+                    <h1>Lessons and insights</br><span>from 6 years</span></h1>
+                    <p>Where to grow your business as a photographer: site or social media?</p>
+                    <button>Register</button>
+                </div>
+                <span class="main-img"></span>
+            </div>
         </div>
         <footer>
             <div class="dot">
-                <span class="circle active"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
+                <span class="circle active" id="s1"></span>
+                <span class="circle" id="s2"></span>
+                <span class="circle" id="s3"></span>
             </div>
         </footer>
     </main>
@@ -93,11 +112,11 @@
             <span class="unlock-img"></span>
             <span class="descr">
                 <h2>The unseen of spending three years at Pixelgrade</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Sed sit amet justo ipsum. Sed accumsan quam vitae est varius 
-                    fringilla. Pellentesque placerat vestibulum lorem sed porta. 
-                    Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus 
-                    pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed sit amet justo ipsum. Sed accumsan quam vitae est varius
+                    fringilla. Pellentesque placerat vestibulum lorem sed porta.
+                    Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus
+                    pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae,
                     tempus sem. Donec elementum pulvinar odio.</p>
                 <button>Learn More</button>
             </span>
@@ -110,26 +129,26 @@
                 <p>We reached here with our hard work and dedication</p>
             </span>
             <div class="achives">
-                    <span>
-                        <span style="background-image: url(./src/achives/achive1.svg);"></span>
-                        <h3>2,245,341</h3>
-                        <p>Members</p>
-                    </span>
-                    <span>
-                        <span style="background-image: url(./src/achives/achive2.svg);"></span>
-                        <h3>46,328</h3>
-                        <p>Clubs</p>
-                    </span>
-                    <span>
-                        <span style="background-image: url(./src/achives/achive3.svg);"></span>
-                        <h3>828,867</h3>
-                        <p>Event Bookings</p>
-                    </span>
-                    <span>
-                        <span style="background-image: url(./src/achives/achive4.svg);"></span>
-                        <h3>1,926,436</h3>
-                        <p>Payments</p>
-                    </span>
+                <span>
+                    <span style="background-image: url(./src/achives/achive1.svg);"></span>
+                    <h3>2,245,341</h3>
+                    <p>Members</p>
+                </span>
+                <span>
+                    <span style="background-image: url(./src/achives/achive2.svg);"></span>
+                    <h3>46,328</h3>
+                    <p>Clubs</p>
+                </span>
+                <span>
+                    <span style="background-image: url(./src/achives/achive3.svg);"></span>
+                    <h3>828,867</h3>
+                    <p>Event Bookings</p>
+                </span>
+                <span>
+                    <span style="background-image: url(./src/achives/achive4.svg);"></span>
+                    <h3>1,926,436</h3>
+                    <p>Payments</p>
+                </span>
             </div>
         </div>
     </section>
@@ -138,14 +157,14 @@
             <span class="how-to-image"></span>
             <span class="descr">
                 <h2>How to design your site footer like we did</h2>
-                <p>Donec a eros justo. Fusce egestas tristique ultrices. 
-                    Nam tempor, augue nec tincidunt molestie, massa nunc 
-                    varius arcu, at scelerisque elit erat a magna. Donec 
-                    quis erat at libero ultrices mollis. In hac habitasse 
-                    platea dictumst. Vivamus vehicula leo dui, at porta nisi 
-                    facilisis finibus. In euismod augue vitae nisi ultricies, 
-                    non aliquet urna tincidunt. Integer in nisi eget nulla commodo 
-                    faucibus efficitur quis massa. Praesent felis est, finibus et nisi 
+                <p>Donec a eros justo. Fusce egestas tristique ultrices.
+                    Nam tempor, augue nec tincidunt molestie, massa nunc
+                    varius arcu, at scelerisque elit erat a magna. Donec
+                    quis erat at libero ultrices mollis. In hac habitasse
+                    platea dictumst. Vivamus vehicula leo dui, at porta nisi
+                    facilisis finibus. In euismod augue vitae nisi ultricies,
+                    non aliquet urna tincidunt. Integer in nisi eget nulla commodo
+                    faucibus efficitur quis massa. Praesent felis est, finibus et nisi
                     ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.</p>
                 <button>Learn More</button>
             </span>
@@ -155,39 +174,40 @@
         <div class="container">
             <span class="opinion-img"></span>
             <span class="descr">
-                <p>Maecenas dignissim justo eget nulla rutrum molestie. 
-                    Maecenas lobortis sem dui, vel rutrum risus tincidunt 
-                    ullamcorper. Proin eu enim metus. Vivamus sed libero 
-                    ornare, tristique quam in, gravida enim. Nullam ut 
-                    molestie arcu, at hendrerit elit. Morbi laoreet elit 
-                    at ligula molestie, nec molestie mi blandit. Suspendisse 
-                    cursus tellus sed augue ultrices, quis tristique nulla sodales. 
-                    Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse 
-                    potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat 
-                    eget. Quisque vulputate odio neque, eget efficitur libero condimentum 
+                <p>Maecenas dignissim justo eget nulla rutrum molestie.
+                    Maecenas lobortis sem dui, vel rutrum risus tincidunt
+                    ullamcorper. Proin eu enim metus. Vivamus sed libero
+                    ornare, tristique quam in, gravida enim. Nullam ut
+                    molestie arcu, at hendrerit elit. Morbi laoreet elit
+                    at ligula molestie, nec molestie mi blandit. Suspendisse
+                    cursus tellus sed augue ultrices, quis tristique nulla sodales.
+                    Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse
+                    potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat
+                    eget. Quisque vulputate odio neque, eget efficitur libero condimentum
                     id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
-                    <p class="name">Tim Smith</p>
-                    <p>British Dragon Boat Racing Association</p>
-                    <span class="companies">
-                        <span style="background-image: url(./src/our-clients/logo1-2.svg);"></span>
-                        <span style="background-image: url(./src/our-clients/logo2.svg);"></span>
-                        <span style="background-image: url(./src/our-clients/logo3.svg);"></span>
-                        <span style="background-image: url(./src/our-clients/logo4.svg);"></span>
-                        <span style="background-image: url(./src/our-clients/logo5.svg);"></span>
-                        <span style="background-image: url(./src/our-clients/logo6.svg);"></span>
-                        <a href="#">Meet all customers <span style="background-image: url(./src/green-arrow.svg);"></span></a>
-                    </span>
+                <p class="name">Tim Smith</p>
+                <p>British Dragon Boat Racing Association</p>
+                <span class="companies">
+                    <span style="background-image: url(./src/our-clients/logo1-2.svg);"></span>
+                    <span style="background-image: url(./src/our-clients/logo2.svg);"></span>
+                    <span style="background-image: url(./src/our-clients/logo3.svg);"></span>
+                    <span style="background-image: url(./src/our-clients/logo4.svg);"></span>
+                    <span style="background-image: url(./src/our-clients/logo5.svg);"></span>
+                    <span style="background-image: url(./src/our-clients/logo6.svg);"></span>
+                    <a href="#">Meet all customers <span
+                            style="background-image: url(./src/green-arrow.svg);"></span></a>
+                </span>
             </span>
         </div>
     </section>
     <section class="blog">
         <span class="text">
             <h2>Caring is the new marketing</h2>
-            <p>The Nextcent blog is the best place 
-                to read about the latest membership 
-                insights, trends and more. See who's 
-                joining the community, read about how 
-                our community are increasing their 
+            <p>The Nextcent blog is the best place
+                to read about the latest membership
+                insights, trends and more. See who's
+                joining the community, read about how
+                our community are increasing their
                 membership income and lot's more.​</p>
         </span>
         <div class="container">
@@ -232,44 +252,35 @@
                     <a href="https://www.youtube.com/"><img src="./src/social/youtube.svg" alt="youtube"></a>
                 </span>
             </span>
-                <span>
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                    </ul>
+            <span>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </span>
+            <span>
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Status</a></li>
+                </ul>
+            </span>
+            <span>
+                <h3>Stay up to date</h3>
+                <span class="inputs">
+                    <input type="email" name="email" id="email" placeholder="Your email address">
+                    <input type="submit" value="">
                 </span>
-                <span>
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="#">Help center</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Legal</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Status</a></li>
-                    </ul>
-                </span>
-                <span>
-                    <h3>Stay up to date</h3>
-                    <span class="inputs">
-                        <input type="email" name="email" id="email" placeholder="Your email address">
-                        <input type="submit" value="">
-                    </span>
-                </span>
+            </span>
         </div>
     </footer>
-
-    <script>
-        const burgerMenu = document.querySelector('#menu-list');
-        const burger = document.querySelector('.burger');
-
-        burger.addEventListener('click', () => {
-            burgerMenu.classList.toggle('open');
-        });
-    </script>
 </body>
 
 </html>
