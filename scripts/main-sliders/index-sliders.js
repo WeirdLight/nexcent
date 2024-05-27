@@ -5,11 +5,9 @@ export function handleFooter() {
     firstSlide.classList.add('new-slide');
 
     const circle = document.querySelectorAll(".circle");
-    let count = 1;
     for (let i = 0; i < 3; i++) {
         circle[i].addEventListener('click', () => {
-            count = i;
-            changingSliders();
+            changingSliders(i);
         });
     }
 }

@@ -1,19 +1,22 @@
-export function changingSliders() {
+let counter = 1;
+export function changingSliders(extraNum) {
+    if(extraNum) counter = extraNum;
+    const circle = document.querySelectorAll(".circle");
     let active = document.querySelector('.active');
 
     let oldSlide = document.querySelector(`.${active.id}`);
-    let newSlide = document.querySelector(`.${circle[count].id}`);
+    let newSlide = document.querySelector(`.${circle[counter].id}`);
     let secondSlide = document.querySelector('.s2');
 
     oldSlide.className = `container ${active.id}`;
-    newSlide.className = `container ${circle[count].id}`;
+    newSlide.className = `container ${circle[counter].id}`;
     secondSlide.className = `container s2`;
-    console.log(active.id, circle[count].id);
-    if (Number(active.id.slice(1, 2)) == Number(circle[count].id.slice(1, 2)) + 1) {
+    console.log(active.id, circle[counter].id);
+    if (Number(active.id.slice(1, 2)) == Number(circle[counter].id.slice(1, 2)) + 1) {
         oldSlide.classList.add('reverse-old');
         newSlide.classList.add('new-slide');
     }
-    else if (Number(active.id.slice(1, 2)) + 2 == Number(circle[count].id.slice(1, 2))) {
+    else if (Number(active.id.slice(1, 2)) + 2 == Number(circle[counter].id.slice(1, 2))) {
         oldSlide.classList.add('remove-slide');
         secondSlide.classList.add('new-slide');
         setTimeout(() => {
@@ -21,7 +24,7 @@ export function changingSliders() {
             newSlide.classList.add('new-slide');
         }, 500);
     }
-    else if (Number(active.id.slice(1, 2)) - 2 == Number(circle[count].id.slice(1, 2))) {
+    else if (Number(active.id.slice(1, 2)) - 2 == Number(circle[counter].id.slice(1, 2))) {
         oldSlide.classList.add('reverse-old');
         newSlide.classList.add('remove-slide');
         secondSlide.classList.add('new-slide');
@@ -36,10 +39,7 @@ export function changingSliders() {
         newSlide.classList.add('new-slide');
     }
     active.classList.remove('active');
-    circle[count].classList.add('active');
+    circle[counter].classList.add('active');
 
-    count = count + 1 == 3 ? 0 : count + 1;
-
-    let interval = () => { setInterval(changingSliders, 5000) };
-    interval();
+    counter = counter + 1 == 3 ? 0 : counter + 1;
 }

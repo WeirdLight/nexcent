@@ -1,7 +1,8 @@
-import { burgerMenu } from "./burgerMenu";
-import { handleFooter } from "./main-sliders/index-sliders";
-import { changingSliders } from "./main-sliders/changingSliders";
+import { burgerMenu } from "./burgerMenu.js";
+import { handleFooter } from "./main-sliders/index-sliders.js";
+import { changingSliders } from "./main-sliders/changingSliders.js";
 
 burgerMenu();
-changingSliders();
 handleFooter();
+let interval = () => { setInterval(changingSliders, 5000) };
+interval();
