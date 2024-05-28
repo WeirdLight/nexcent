@@ -1,6 +1,7 @@
 :root{
     --color-main: white;
-    --fc-main: #4D4D4D;
+    --fc-main: #4d4d4d;
+    --fc-background: rgba(77,77,77, 0.7);
     --fc-grey: #717171;
     --fs-nav: 16px;
     --fs-h1: 45px;
@@ -89,7 +90,7 @@ nav{
     margin-left: 4px;
 }
 
-button{
+button, form input[type='submit']{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,14 +102,15 @@ button{
     border: none;
     cursor: pointer;
 }
-button:focus{
+button:focus, form input[type='submit']:focus{
     border: 2px var(--fc-main) solid;
+    background: var(--color-brand-primary);
 }
-button:active{
+button:active, form input[type='submit']:active{
     background-color: var(--color-brand-primary2);
     border-color: none;
 }
-nav, button{
+nav, button, form input[type='submit']{
     font-family: var(--ff-inter);
     font-size: var(--fs-nav);
     font-weight: 500;
@@ -215,7 +217,7 @@ main div.container.reverse-old{
 }
 
 .our-client p, .achive p, .blog p{
-    margin: 6px 0 12px 0;
+    margin: 6px 0 20px 0;
 }
 
 div.clients{
@@ -388,6 +390,11 @@ article{
     height: 256px;
     border-radius: 5.6px;
     position: relative;
+    transition: transform 0.3s;
+}
+
+article:hover{
+    transform: scale(1.1, 1.1);
 }
 .blog div.container{
     flex-wrap: wrap;
@@ -537,6 +544,80 @@ footer a:active{
     text-decoration-color: var(--fc-grey);
 }
 
+.register-form{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--fc-background);
+    z-index: 10;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 400px;
+    height: 300px;
+    background-color: var(--color-main);
+    position: relative;
+    padding: 20px 50px;
+}
+form h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+form svg, form span, line{
+    display: flex;
+    right: 15%;
+    bottom: 21.5%;
+    position: absolute;
+    cursor: pointer;
+}
+.exit{
+    top: 15px;
+    right: 20px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(./src/exit.svg);
+}
+form label{
+    font-size: var(--fs-p);
+    font-family: var(--ff-inter);
+    color: var(--fc-main);
+    display: block;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    border: 1.5px solid rgba(0,0,0,0);
+    border-radius: 25px;
+    background-color: rgb(151, 151, 151);
+    padding: 0 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+form input:focus{
+    background-color: var(--color-silver);
+    border-color: var(--color-black);
+    outline: none;
+}
+form input:focus::placeholder{
+    color: var(--color-input);
+}
+form input[type='submit']{
+    margin: 0 auto 0 auto;
+    transition: 0s;
+}
+.open{
+    display: flex;
+}
 @media (max-width: 970px){
     header nav{
         position: absolute;
@@ -548,9 +629,6 @@ footer a:active{
         background-color: rgba(97, 105, 108, 0.7);
         padding: 0 1%;
         display: none;
-    }
-    nav.open{
-        display: flex;
     }
     .burger{
         display: flex;
@@ -564,6 +642,9 @@ footer a:active{
         margin: 0;
     }
 
+    main{
+        height: 400px;
+    }
     main div.container{
         justify-content: center;
         text-align: center;

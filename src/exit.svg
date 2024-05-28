@@ -1,0 +1,9 @@
+<svg width="100" height="100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <!-- Круг -->
+    <circle cx="12" cy="12" r="10" stroke="#4d4d4d" stroke-width="2" fill="none"/>
+    <!-- Ліва діагональ хрестика -->
+    <line x1="8" y1="8" x2="16" y2="16" stroke="#4d4d4d" stroke-width="2"/>
+    <!-- Права діагональ хрестика -->
+    <line x1="16" y1="8" x2="8" y2="16" stroke="#4d4d4d" stroke-width="2"/>
+</svg>
+
