@@ -11,7 +11,7 @@ export function changingSlides(extraNum) {
     oldSlide.className = `container ${active.id}`;
     newSlide.className = `container ${circle[counter].id}`;
     secondSlide.className = `container s2`;
-    console.log(active.id, circle[counter].id);
+
     if (Number(active.id.slice(1, 2)) == Number(circle[counter].id.slice(1, 2)) + 1) {
         oldSlide.classList.add('reverse-old');
         newSlide.classList.add('new-slide');

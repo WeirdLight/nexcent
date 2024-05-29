@@ -1,4 +1,5 @@
 import { handleFooter } from "./index-slides.js";
+import { registerForm } from "../register.js";
 
 export function CreateFragments() {
     fetch('https://62y6g.wiremockapi.cloud/slides/1')
@@ -21,9 +22,22 @@ export function CreateFragments() {
                 let template = document.createElement('template');
                 template.innerHTML = fragment;
                 slides.appendChild(template.content);
+
+                let circleContainer = document.querySelector('.dot');
+                let circleFragment = `
+                    <span class="circle ${element.id == 1 ? 'active' : ''}" id="s${element.id}"></span>
+                `;
+
+                template = document.createElement('template');
+                template.innerHTML = circleFragment;
+                circleContainer.appendChild(template.content);
+                circleContainer.style.width = `${Number(circleContainer.style.width.replace('px', '')) + 10}px`;
             });
         })
         .then(()=>{
             handleFooter();
+        })
+        .then(() => {
+            registerForm();
         });
 }
