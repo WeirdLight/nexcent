@@ -144,6 +144,11 @@ h1{
     line-height: calc(var(--fs-h1)*1.18);
     font-weight: 600;
     color: var(--fc-main);
+    width: 500px;
+}
+.get-demo h1{
+    width: 75%;
+    margin: 0 auto;
 }
 h1 > span, h2>span{
     color: var(--color-brand-primary);
@@ -160,9 +165,11 @@ main button{
     width: 126px;
 }
 .main-img{
-    background: url(./src/main-img.svg);
     height: 283px;
     width: 272px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .dot{
     width: 30px;
@@ -414,6 +421,12 @@ article h3{
     color: var(--fc-grey);
     font-size: 14px;
     font-weight: 600;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    height: 75px;
 }
 .title{
     width: 220px;
