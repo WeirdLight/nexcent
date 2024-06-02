@@ -1,7 +1,7 @@
-import { handleFooter } from "./index-slides.js";
+import { handleFooter } from "./handleFooter.js";
 import { registerForm } from "../register.js";
 
-export function CreateFragments() {
+export function createFragmentSlides() {
     fetch('https://62y6g.wiremockapi.cloud/slides/1')
         .then(data => data.json())
         .then(data => {

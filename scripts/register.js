@@ -53,12 +53,12 @@ export function registerForm(){
             fetch('https://62y6g.wiremockapi.cloud/json/1', {
                 method: "POST",
                 body: JSON.stringify({
-                    "id": `${data[data.length-1].id+1}`,
+                    "id": data[data.length-1].id+1,
                     "nickname": document.querySelector('#nickname').value,
                     "email": document.querySelector('#email').value,
                     "password": password.value
                 })
-            })
+            });
         });
     });
 }

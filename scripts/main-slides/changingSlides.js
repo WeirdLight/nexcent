@@ -41,5 +41,5 @@ export function changingSlides(extraNum) {
     active.classList.remove('active');
     circle[counter].classList.add('active');
 
-    counter = counter + 1 == 3 ? 0 : counter + 1;
+    counter = counter + 1 == circle.length ? 0 : counter + 1;
 }
