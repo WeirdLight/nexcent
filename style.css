@@ -93,7 +93,7 @@ nav{
     margin-left: 4px;
 }
 
-button, form input[type='submit']{
+button, .register-form form input[type='submit']{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +113,7 @@ button:active, form input[type='submit']:active{
     background-color: var(--color-brand-primary2);
     border-color: none;
 }
-nav, button, form input[type='submit']{
+nav, button, .register-form  form input[type='submit']{
     font-family: var(--ff-inter);
     font-size: var(--fs-nav);
     font-weight: 500;
@@ -393,6 +393,7 @@ a > span{
 .blog .text{
     max-width: 900px;
     min-width: 200px;
+    padding: 0 40px;
 }
 article{
     width: 256px;
@@ -537,10 +538,10 @@ input::placeholder{
 }
 footer input[type='submit']{
     right: 10px;
-    top: 25%;
+    top: 30%;
     position: absolute;
-    min-width: 11px;
-    min-height: 11px;
+    width: 11px;
+    height: 11px;
     background-color: rgba(0,0,0,0);
     border: none;
     background-image: url(./src/plane.svg);
@@ -571,25 +572,26 @@ footer a:active{
     align-items: center;
 }
 
-form{
+.register-form form{
     width: 400px;
     height: 300px;
     background-color: var(--color-main);
     position: relative;
     padding: 20px 50px;
 }
-form h2{
+.register-form form h2{
     text-align: center;
     margin-bottom: 15px;
 }
-form svg, form span, line{
+.register-form form svg, 
+.register-form form span, line{
     display: flex;
     right: 15%;
     bottom: 21.5%;
     position: absolute;
     cursor: pointer;
 }
-.exit{
+.register-form form .exit{
     top: 15px;
     right: 20px;
     background-position: center center;
@@ -600,7 +602,7 @@ form svg, form span, line{
     height: 24px;
     background-image: url(./src/exit.svg);
 }
-form label{
+.register-form form label{
     font-size: var(--fs-p);
     font-family: var(--ff-inter);
     color: var(--fc-main);
@@ -608,7 +610,7 @@ form label{
     font-weight: 400;
     margin-bottom: 4px;
 }
-form input{
+.register-form form input{
     width: 100%;
     height: 30px;
     border: 1.5px solid rgba(0,0,0,0);
@@ -618,15 +620,15 @@ form input{
     margin-bottom: 10px;
     transition: background-color 0.3s;
 }
-form input:focus{
+.register-form form input:focus{
     background-color: var(--color-silver);
     border-color: var(--color-black);
     outline: none;
 }
-form input:focus::placeholder{
+.register-form form input:focus::placeholder{
     color: var(--color-input);
 }
-form input[type='submit']{
+.register-form form input[type='submit']{
     margin: 0 auto 0 auto;
     transition: 0s;
 }
@@ -652,8 +654,11 @@ form input[type='submit']{
         color: var(--color-silver);
         font-size: 14px;
     }
+    header a:hover{
+        text-decoration-color: var(--color-silver);
+    }
     header button{
-        transform: scale(0.7,0.7);
+        transform: scale(0.8,0.8);
         margin: 0;
     }
 
@@ -698,9 +703,9 @@ form input[type='submit']{
         flex-wrap: wrap;
     }
 
-    .achive span.descr, .unlock span.descr{
+    /* .achive span.descr{
         margin: 0 auto;
-    }
+    } */
     .achives{
         width: 352px;
         min-width: 270px;
@@ -714,7 +719,15 @@ form input[type='submit']{
     .how-to-image{
         display: none;
     }
-
+    section.how-to .container, 
+    .unlock .container, 
+    .achive .container{
+        justify-content: center;
+    }
+    .how-to .descr, .unlock span.descr{
+        width: 80%;
+        min-width: 380px;
+    }
     .opinion .container{
         display: block;
     }
