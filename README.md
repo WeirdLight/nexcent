@@ -1,6 +1,9 @@
 # Nexcent
 HTML/CSS/JavaScript
 
+## Deployed 
+https://flower-design-kate-diachuk.web.app/
+
 ## Setup
 First clone the repo from GitHub, then run:
 $ cd nexcent
