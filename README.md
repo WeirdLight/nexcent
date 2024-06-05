@@ -2,7 +2,7 @@
 HTML/CSS/JavaScript
 
 ## Deployed 
-https://flower-design-kate-diachuk.web.app/
+https://nexcent-kate-diachuk.web.app/
 
 ## Setup
 First clone the repo from GitHub, then run:
